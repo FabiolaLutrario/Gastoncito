@@ -26,6 +26,7 @@ import { Keyboard } from "react-native";
 
 //Routes
 import ROUTES from "../../constants/routes";
+import { useFocusEffect } from "@react-navigation/native";
 
 //Images
 const logo = require("../../../assets/nutrientes.png");
@@ -40,13 +41,24 @@ export default function Login({ navigation, route }) {
 
   //Valores state
   const [name, setName] = useState("");
+  const [botonAceptarPresionado, setBotonAceptarPresionado] = useState(false);
 
   const handlerIniciarSesion = async () => {
     await iniciarCarga();
     Keyboard.dismiss();
     await finalizarCarga();
-    navigation.navigate(ROUTES.DRAWER_HOME, { name });
+    setBotonAceptarPresionado(true);
+    //navigation.navigate(ROUTES.DRAWER_HOME, { name });
   };
+
+  useFocusEffect(
+    React.useCallback(() => {
+      if (navigation.isFocused() === true) {
+        if (botonAceptarPresionado)
+          navigation.navigate(ROUTES.DRAWER_HOME, { name });
+      }
+    }, [botonAceptarPresionado])
+  );
 
   return (
     <Center

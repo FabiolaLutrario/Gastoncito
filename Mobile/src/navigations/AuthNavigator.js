@@ -15,6 +15,7 @@ import HomeNavigator from "../navigations/HomeNavigator";
 import ROUTES from "../constants/routes.js";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
+import DrawerNavigator from "./DrawerNavigator";
 const Stack = createNativeStackNavigator();
 
 export default function AuthNavigator({navigationIsReady}) {
@@ -71,8 +72,8 @@ export default function AuthNavigator({navigationIsReady}) {
         />
 
         <Stack.Screen
-          name={ROUTES.DRAWER_HOME}
-          component={HomeNavigator}
+          name={ROUTES.HOME}
+          component={DrawerNavigator}
           options={{
             headerShown: false,
           }}

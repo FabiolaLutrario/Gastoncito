@@ -39,6 +39,7 @@ const AuthState = props => {
   return (
     <authContext.Provider
       value={{
+        cargando: state.cargando,
         iniciarCarga,
         finalizarCarga,
       }}
