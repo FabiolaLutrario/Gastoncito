@@ -18,5 +18,13 @@ Cores: 8
 *Abrir el proyecto en visual studio code y escribir el comando ----->
 npm i
 
+*Activar modo desarrollador en el celular
+
+*Conectar celu a la pc con cable usb.
+
 *Luego, para ejecutar el proyecto escribir el comando ------------>
 npm run android:dev
+
+.Cuando escribas el comando en consola, te va a pedir en el celular dar permisos de conexión entrante.
+
+
