@@ -15,6 +15,8 @@ Cores: 8
 
 *Tener instalado Java JDK 17 con las variable de entorno de windows configuradas.
 
+"ubicarse en carpeta Mobile
+
 *Abrir el proyecto en visual studio code y escribir el comando ----->
 npm i
 
